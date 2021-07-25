@@ -1,3 +1,4 @@
+
 class Recipe {
   final String name;
   final String images;
@@ -24,5 +25,10 @@ class Recipe {
     return snapshot.map((data) {
       return Recipe.fromJson((data));
     }).toList();
+  }
+
+  @override
+  String toString() {
+    return 'Recipe {name: $name, image: $images, rating: $rating, totalTime: $totalTime}';
   }
 }
