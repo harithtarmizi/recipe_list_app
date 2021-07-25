@@ -10,7 +10,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   late List<Recipe> _recipes;
-  // ignore: unused_field
   bool _isLoading = true;
 
   @override
