@@ -1,7 +1,7 @@
 class Recipe {
   final String name;
   final String images;
-  final String rating;
+  final double rating;
   final String totalTime;
 
   Recipe({
@@ -16,7 +16,13 @@ class Recipe {
       name: json['name'] as String,
       images: json['images'][0]['hostedLargeUrl'] as String,
       rating: json['rating'] as double,
-      totalTime: json['totalTime'] as String
+      totalTime: json['totalTime'] as String,
     );
+  }
+
+  static List<Recipe> recipesFromSnapShot(List snapshot) {
+    return snapshot.map((data) {
+      return Recipe.fromJson((data));
+    }).toList();
   }
 }
