@@ -6,10 +6,10 @@ class RecipeCard extends StatelessWidget {
   final String cookTime;
   final String thumbnailUrl;
   RecipeCard({
-    @required this.title,
-    @required this.rating,
-    @required this.cookTime,
-    @required this.thumbnailUrl,
+    required this.title,
+    required this.rating,
+    required this.cookTime,
+    required this.thumbnailUrl,
   });
 
   @override
